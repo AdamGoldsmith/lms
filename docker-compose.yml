@@ -1,0 +1,32 @@
+version: '3.7'
+services:
+  lms:
+    container_name: lms
+    image: lmscommunity/logitechmediaserver
+    volumes:
+      - type: bind
+        source: ${LMS_DIR}/config
+        target: /config
+        read_only: false
+      - type: bind
+        source: ${LMS_DIR}/playlist
+        target: /playlist
+        read_only: false
+      - type: bind
+        source: ${LMS_DIR}/music
+        target: /music
+        read_only: true
+      - type: bind
+        source: /etc/localtime
+        target: /etc/localtime
+        read_only: true
+      - type: bind
+        source: /etc/timezone
+        target: /etc/timezone
+        read_only: true
+    ports:
+      - 9000:9000/tcp
+      - 9090:9090/tcp
+      - 3483:3483/tcp
+      - 3483:3483/udp
+    restart: always
