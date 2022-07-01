@@ -18,4 +18,4 @@ docker-compose up -d
 
 ## Reference
 
-* [LMS Docker Hub Site](https://registry.hub.docker.com/r/lmscommunity/logitechmediaserver/#!)
+* [LMS Docker Hub Site](https://registry.hub.docker.com/r/lmscommunity/logitechmediaserver/#!){:target="_blank"}
